@@ -1,0 +1,36 @@
+.App {
+  max-width: 460px;
+  width: 100%;
+  margin: 50px auto;
+  background: #ffffff;
+  box-shadow: 0px 12px 24px rgba(44, 39, 56, 0.04), 0px 32px 64px rgba(44, 39, 56, 0.08);
+  border-radius: 24px;
+  padding: 40px 30px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  color: #2c2738;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2c2738;
+  margin-bottom: 52px;
+}
+
+.link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #0880ae;
+  cursor: pointer;
+}
