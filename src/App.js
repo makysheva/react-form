@@ -7,7 +7,10 @@ function App() {
     <div className={styles.App}>
       <h1 className={styles.title}>Регистрация</h1>
       <p className={styles.subtitle}>
-        Уже есть аккаунт? <a className={styles.link}>Войти</a>
+        Уже есть аккаунт?{' '}
+        <a className={styles.link} href="/">
+          Войти
+        </a>
       </p>
       <FormProvider>
         <Form />

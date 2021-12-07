@@ -30,6 +30,7 @@
   line-height: 21px;
   color: #756f86;
   margin-left: 8px;
+  cursor: pointer;
 }
 
 .link {
@@ -57,11 +58,16 @@
   cursor: pointer;
 }
 
+.blue {
+  background: #0880ae;
+  color: #fff;
+}
+
 .wrap {
   margin-bottom: 33px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -70,7 +76,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .defaultCheckbox {
@@ -85,4 +91,16 @@
 
 .checkboxInp {
   display: none;
+}
+
+.hasError,
+.hasError:active,
+.hasError:focus,
+.hasError:focus-visible,
+.hasError:visited {
+  border: 2px solid red;
+}
+
+.red {
+  color: red;
 }
