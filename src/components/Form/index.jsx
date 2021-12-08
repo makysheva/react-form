@@ -92,7 +92,9 @@ const Form = () => {
           {...register('language', {
             required: true,
           })}>
-          <option value="lang">Язык</option>
+          <option value="lang" selected>
+            Язык
+          </option>
           <option value="rus">Русский</option>
           <option value="en">Английский</option>
           <option value="ar">Арабский</option>
