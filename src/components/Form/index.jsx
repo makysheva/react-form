@@ -2,24 +2,23 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import styles from './Form.module.scss';
 
-const Form = ({ onSaveInfo }) => {
-  const { handleSubmit, register, formState, reset } = useForm();
-  const [fields, setFields] = React.useState({
-    firstName: '',
-    email: '',
-    phone: '',
-    language: '',
-    checkbox: false,
-  });
+const defaultValues = {
+  firstName: '',
+  email: '',
+  phone: '',
+  language: '',
+  checkbox: false,
+};
+
+const Form = () => {
+  const { handleSubmit, register, formState, reset } = useForm({ defaultValues, mode: 'onChange' });
+
   const [checked, setChecked] = React.useState(false);
 
   const onSubmit = (values) => {
     console.log('ФОРМА!', values);
-    if (onSaveInfo) {
-      onSaveInfo(fields);
-    }
     setChecked(!checked);
-    reset();
+    reset(defaultValues);
   };
 
   return (
@@ -132,8 +131,8 @@ const Form = ({ onSaveInfo }) => {
       <div className={styles.wrap}>
         <button
           type="submit"
-          className={`${styles.button} ${formState.isDirty ? styles.blue : ''} `}
-          disabled={formState.isDirty.valueOf}>
+          className={`${styles.button} ${!formState.isValid ? '' : styles.blue}`}
+          disabled={!formState.isValid}>
           Зарегистрироваться
         </button>
       </div>
